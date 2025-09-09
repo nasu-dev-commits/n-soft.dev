@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N-Soft.dev – Solicitação de Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-600 font-sans text-gray-800">
+    <!--LINK TO USO FORM <a href="form.html" class="text-sm md:text-xl p-2 text-black bg-yellow-500 rounded-xl hover:bg-white hover:text-stone-800">Quero meu Site</a> -->
+<!-- Header / Navbar fixo -->
+  <header class="fixed w-full bg-gradient-to-r from-stone-600 to-stone-400/90 shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between py-4">
+    
+    <!-- Logo -->
+    <h1 class="text-3xl  text-stone-50">
+      N-Soft<span class="text-3xl font-bold text-yellow-500">.dev</span>
+    </h1>
+
+    <!-- Botão menu mobile -->
+    <button data-collapse-toggle="navbar-default" type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 rounded-lg md:hidden hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-stone-200"
+      aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Abrir menu principal</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Links -->
+    <nav class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="flex flex-col font-medium mt-4 md:mt-0 md:flex-row md:space-x-6">
+        <li><a href="index.html" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Início</a></li>
+        <li><a href="index.html#sobre" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Sobre</a></li>
+        <li><a href="index.html#servicos" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Serviços</a></li>
+        <li><a href="index.html#portfolio" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Portfólio</a></li>
+        <li><a href="index.html#clientes" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Clientes</a></li>
+        <li><a href="index.html#contato" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Contato</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  </header>
+  <br><br><br><br>
+
+  <!-- FORM -->
+  <main class="max-w-sm mx-auto bg-stone-200 rounded-xl shadow-md p-4 mb-8">
+    <!-- >>> Troque o link abaixo pelo endpoint do seu Formspree <<< -->
+    <form action="https://formspree.io/f/xandlloo" method="POST" class="space-y-4">
+
+      <!-- 1 - DADOS CLIENTE -->
+      <section>
+        <h2 class="font-semibold mb-1">1 - Dados do Cliente</h2>
+        <label class="block text-sm mb-0">Nome completo<span class="text-red-500 font-bold">*</span>:</label>
+        <input type="text" name="nome" class="w-full border p-0 rounded" required>
+        <label class="block text-sm mt-2 mb-0">Telefone<span class="text-red-500 font-bold">*</span>:</label>
+        <input type="tel" name="telefone" class="w-full border p-0 rounded" placeholder="Ex.: (12) 12345-1234" required>
+        <label class="block text-sm mt-2 mb-0">WhatsApp?
+        <select name="whatsapp" class="w-[90px] border p-0 rounded">
+          <option>Selecione:</option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+        </label>
+        <label class="block text-sm mt-2 mb-0">E-mail<span class="text-red-500 font-bold">*</span>:</label>
+        <input type="email" name="email" class="w-full border p-0 rounded" required>
+        <label class="block text-sm mt-2 mb-0">Endereço:</label>
+        <textarea name="endereco" class="w-full border p-0 rounded"></textarea>
+      </section>
+
+      <!-- 2 - DADOS EMPRESA -->
+      <section>
+        <h2 class="font-semibold mb-1">2 - Dados da Empresa</h2>
+        <label class="block text-sm mb-0">Nome da empresa:</label>
+        <input type="text" name="empresa" class="w-full border p-0 rounded">
+
+        <label class="block text-sm mt-2 mb-0">Ramo de atuação / atividade principal:</label>
+        <input type="text" name="ramo" class="w-full border p-0 rounded">
+
+        <label class="block text-sm mt-2 mb-0">Produtos ou serviços oferecidos:</label>
+        <textarea name="produtos" class="w-full border p-0 rounded"></textarea>
+
+        <label class="block text-sm mt-2 mb-0">Público-alvo:</label>
+        <textarea name="publico" class="w-full border p-0 rounded"></textarea>
+      </section>
+
+      <!-- 3 - DADOS DO SITE -->
+      <section>
+        <h2 class="font-semibold mb-1">3 - Dados do Site</h2>
+        <label class="block text-sm mb-0">Objetivo do site:</label>
+        <textarea name="objetivo" class="w-full border p-0 rounded" placeholder="Ex.: apresentar empresa, captar clientes, vendas online"></textarea>
+
+        <label class="block text-sm mt-2 mb-2">Tipo de site:</label>
+        <div class="space-y-2 text-sm font-semibold m-4">
+          <label><input type="checkbox" name="tipo[]" value="Landing Page"> Landing Page</label><br>
+          <label><input type="checkbox" name="tipo[]" value="Institucional"> Site Institucional</label><br>
+          <label><input type="checkbox" name="tipo[]" value="Portfólio"> Portfólio</label><br>
+          <label><input type="checkbox" name="tipo[]" value="Blog"> Blog</label><br>
+          <label><input type="checkbox" name="tipo[]" value="Outro"> Outro</label>
+        </div>
+
+        <label class="block text-sm mt-2 mb-0">Possui logotipo?
+        <select name="logo" class="w-[90px] border p-0 rounded">
+          <option>Selecione:</option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+        </label>
+
+        <label class="block text-sm mt-2 mb-0">Preferência de cores:</label>
+        <input type="text" name="cores" class="w-full border p-0 rounded" placeholder="Ex.: azul, com textos branco e detalhes cinza">
+
+        <label class="block text-sm mt-2 mb-0">Possui conteúdo pré-definido?</label>
+        <textarea name="conteudo" class="w-full border p-0 rounded" placeholder="Ex.: textos, imagens, slogan"></textarea>
+
+        <label class="block text-sm mt-2 mb-0">Necessita integração com redes sociais?</label>
+        <textarea name="redes" class="w-full border p-0 rounded" placeholder="Ex.: whatsapp, messenger, direct"></textarea>
+
+        <label class="block text-sm mt-2 mb-0">Necessita suporte para criação de conteúdo?</label>
+        <select name="suporte" class="w-[90px] border p-0 rounded">
+          <option>Selecione:</option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </section>
+
+      <!-- 4 - OPCIONAIS -->
+      <section>
+        <h2 class="font-semibold mb-1">4 - Opcionais</h2>
+        <div class="text-sm m-2">
+            <label><input type="checkbox" name="opcionais[]" value="Email"> Criação de e-mail profissional</label><br>
+            <label><input type="checkbox" name="opcionais[]" value="Google Maps"> Cadastro no Google Maps</label>
+        </div>
+      </section>
+
+      <!-- 5 - INFORMAÇÕES ADICIONAIS -->
+      <section>
+        <h2 class="font-semibold mb-2">5 - Informações adicionais</h2>
+        <textarea name="extras" class="w-full border p-0 rounded" placeholder="Descreva qualquer detalhe adicional"></textarea>
+      </section>
+
+      <!-- BOTÃO -->
+      <div class="text-center">
+        <button type="submit" class="bg-black text-yellow-500 font-semibold py-3 p-3 rounded-2xl hover:bg-gray-800">
+          Enviar Formulário
+        </button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
