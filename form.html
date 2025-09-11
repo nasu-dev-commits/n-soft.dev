@@ -32,12 +32,12 @@
     <!-- Links -->
     <nav class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="flex flex-col font-medium mt-4 md:mt-0 md:flex-row md:space-x-6">
-        <li><a href="index.html" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Início</a></li>
-        <li><a href="index.html#sobre" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Sobre</a></li>
-        <li><a href="index.html#servicos" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Serviços</a></li>
-        <li><a href="index.html#portfolio" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Portfólio</a></li>
-        <li><a href="index.html#clientes" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Clientes</a></li>
-        <li><a href="index.html#contato" class="block py-2 px-3 text-gray-800 hover:text-gray-100">Contato</a></li>
+        <li><a href="index.html" class="block py-2 px-3 text-gray-800 hover:text-gray-100 transform transition duration-700">Início</a></li>
+        <li><a href="index.html#sobre" class="block py-2 px-3 text-gray-800 hover:text-gray-100 transform transition duration-700">Sobre</a></li>
+        <li><a href="index.html#servicos" class="block py-2 px-3 text-gray-800 hover:text-gray-100 transform transition duration-700">Serviços</a></li>
+        <li><a href="index.html#portfolio" class="block py-2 px-3 text-gray-800 hover:text-gray-100 transform transition duration-700">Portfólio</a></li>
+        <li><a href="index.html#clientes" class="block py-2 px-3 text-gray-800 hover:text-gray-100 transform transition duration-700">Clientes</a></li>
+        <li><a href="index.html#contato" class="block py-2 px-3 text-gray-800 hover:text-gray-100 transform transition duration-700">Contato</a></li>
       </ul>
     </nav>
 
@@ -72,81 +72,39 @@
 
       <!-- 2 - DADOS EMPRESA -->
       <section>
-        <h2 class="font-semibold mb-1">2 - Dados da Empresa</h2>
-        <label class="block text-sm mb-0">Nome da empresa:</label>
-        <input type="text" name="Nome_empresa:" class="w-full border p-0 rounded">
-
-        <label class="block text-sm mt-2 mb-0">Ramo de atuação / atividade principal:</label>
-        <input type="text" name="Ramo_atividade:" class="w-full border p-0 rounded">
-
-        <label class="block text-sm mt-2 mb-0">Produtos ou serviços oferecidos:</label>
-        <textarea name="Produtos_servicos:" class="w-full border p-0 rounded"></textarea>
-
-        <label class="block text-sm mt-2 mb-0">Público-alvo:</label>
-        <textarea name="Publico_alvo:" class="w-full border p-0 rounded"></textarea>
-      </section>
-
-      <!-- 3 - DADOS DO SITE -->
-      <section>
-        <h2 class="font-semibold mb-1">3 - Dados do Site</h2>
-        <label class="block text-sm mb-0">Objetivo do site:</label>
-        <textarea name="Objetivo:" class="w-full border p-0 rounded" placeholder="Ex.: apresentar empresa, captar clientes, vendas online"></textarea>
-
+        <h2 class="font-semibold mb-1">2 - Preferências:</h2>
+        <label class="block text-sm mb-0">Defina o nome do site:</label>
+        <input type="text" name="Nome_empresa:" class="w-full border p-0 rounded" placeholder="Ex.: minhaempresa.com.br / minhaempresa.net">
         <label class="block text-sm mt-2 mb-2">Tipo de site:</label>
         <div class="space-y-2 text-sm font-semibold m-4">
           <label><input type="checkbox" name="Tipo_de_site:" value="Landing Page"> Landing Page</label><br>
           <label><input type="checkbox" name="Tipo_de_site:" value="Institucional"> Site Institucional</label><br>
           <label><input type="checkbox" name="Tipo_de_site:" value="Portfólio"> Portfólio</label><br>
           <label><input type="checkbox" name="Tipo_de_site:" value="Blog"> Blog</label><br>
-          <label><input type="checkbox" name="Tipo_de_site:" value="Outro"> Outro</label>
+          <label><input type="checkbox" name="Tipo_de_site:" value="Outro"> E-commerce</label>
         </div>
 
-        <label class="block text-sm mt-2 mb-0">Possui logotipo?
-        <select name="_Possui_logo:" class="w-[90px] border p-0 rounded">
-          <option>Selecione:</option>
-          <option>Sim</option>
-          <option>Não</option>
-        </select>
-        </label>
-
-        <label class="block text-sm mt-2 mb-0">Preferência de cores:</label>
-        <input type="text" name="Preferencia_cores:" class="w-full border p-0 rounded" placeholder="Ex.: azul, com textos branco e detalhes cinza">
-
-        <label class="block text-sm mt-2 mb-0">Possui conteúdo pré-definido?</label>
-        <textarea name="Possui_conteudo:" class="w-full border p-0 rounded" placeholder="Ex.: textos, imagens, slogan"></textarea>
-
-        <label class="block text-sm mt-2 mb-0">Necessita integração com redes sociais?</label>
-        <textarea name="Integracao_redes:" class="w-full border p-0 rounded" placeholder="Ex.: whatsapp, messenger, direct"></textarea>
-
-        <label class="block text-sm mt-2 mb-0">Necessita suporte para criação de conteúdo?</label>
-        <select name="Suporte_conteudo:" class="w-[90px] border p-0 rounded">
-          <option>Selecione:</option>
-          <option>Sim</option>
-          <option>Não</option>
-        </select>
-      </section>
-
-      <!-- 4 - OPCIONAIS -->
-      <section>
-        <h2 class="font-semibold mb-1">4 - Opcionais</h2>
-        <div class="text-sm m-2">
-            <label><input type="checkbox" name="Opcionais:" value="Email"> Criação de e-mail profissional</label><br>
-            <label><input type="checkbox" name="Opcionais:" value="Google Maps"> Cadastro no Google Maps</label>
+        <label class="block text-sm mt-2 mb-2">Interesses:</label>
+        <div class="space-y-2 text-sm font-semibold m-4">
+          <label><input type="checkbox" name="Logotipo:" value="..."> Logotipo</label><br>
+          <label><input type="checkbox" name="Integrar_redes:" value="..."> E-mail profissional</label><br>
+          <label><input type="checkbox" name="E-mail_profissional:" value="..."> Integrar redes sociais:<br>(facebook, instagram, twiter)</label><br>
         </div>
       </section>
 
-      <!-- 5 - INFORMAÇÕES ADICIONAIS -->
+      <!-- 3 - INFORMAÇÕES ADICIONAIS -->
       <section>
         <h2 class="font-semibold mb-2">5 - Informações adicionais</h2>
         <textarea name="Observacoes:" class="w-full border p-0 rounded" placeholder="Descreva qualquer detalhe adicional"></textarea>
+        <label class="block text-sm mt-2 mb-0 text-center">"Após o envio do formulário entraremos em contato o mais breve possível."</label>
       </section>
 
       <!-- BOTÃO -->
       <div class="text-center">
-        <a href="index.html" class="block py-2 px-3 text-red-600 font-bold hover:text-red-700 bg-red-200">Cancelar</a><br>
-        <button type="submit" class="bg-black text-yellow-500 font-semibold py-3 p-3 rounded-2xl hover:bg-gray-800">
+        <button type="submit" class="bg-black text-yellow-500 font-semibold py-3 p-3 mb-7 rounded-2xl hover:bg-gray-800 transform transition duration-700">
           Enviar Formulário
         </button>
+        <a href="index.html" class="block py-2 px-3 text-red-600 font-bold hover:text-red-700 bg-red-200">Cancelar</a><br>
       </div>
     </form>
   </main>
