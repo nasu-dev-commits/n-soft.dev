@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nova Elétrica</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans text-gray-800">
+<body class="bg-gray-100">
 
   <!-- HEADER -->
   <header class="bg-orange-500 text-white shadow-md fixed w-full z-50">
@@ -16,7 +16,7 @@
 
       <!-- Menu Desktop -->
       <nav class="hidden md:flex gap-6 text-sm font-semibold">
-        <a href="#hero" class="hover:text-yellow-300">Início</a>
+        <a href="#inicio" class="hover:text-yellow-300">Início</a>
         <a href="#servicos" class="hover:text-yellow-300">Serviços</a>
         <a href="#sobre" class="hover:text-yellow-300">Sobre</a>
         <a href="#contato" class="hover:text-yellow-300">Contato</a>
@@ -33,88 +33,86 @@
 
     <!-- Menu Mobile -->
     <div id="menu" class="hidden md:hidden bg-orange-600 px-6 py-4 flex flex-col gap-3">
-      <a href="#hero" class="hover:text-yellow-300 menu-link">Início</a>
-      <a href="#servicos" class="hover:text-yellow-300 menu-link">Serviços</a>
-      <a href="#sobre" class="hover:text-yellow-300 menu-link">Sobre</a>
-      <a href="#contato" class="hover:text-yellow-300 menu-link">Contato</a>
+      <a href="#inicio" class="hover:text-yellow-300">Início</a>
+      <a href="#servicos" class="hover:text-yellow-300">Serviços</a>
+      <a href="#sobre" class="hover:text-yellow-300">Sobre</a>
+      <a href="#contato" class="hover:text-yellow-300">Contato</a>
     </div>
   </header>
 
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    const links = document.querySelectorAll('.menu-link');
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden'); // Fecha o menu ao clicar em um link
-      });
-    });
-  </script>
-
   <!-- HERO -->
-  <section id="hero" class="relative text-white h-[90vh] flex items-center justify-center" 
-           style="background-image: url('./images/header.jpg'); background-size: cover; background-position: center;">
-    <div class="p-6 rounded-xl text-center max-w-2xl">
-      <h2 class="text-4xl md:text-4xl font-semibold mb-4 shadow-xl shadow-white">Instalações & Reparos Elétricos</h2><br>
+  <section id="inicio" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('eletrica.jpg');">
+    <div class="bg-black bg-opacity-50 text-center text-white p-6 rounded-lg">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Soluções Elétricas Profissionais</h1>
+      <p class="text-lg md:text-xl mb-6">Segurança, qualidade e eficiência para sua residência ou empresa.</p>
+      <a href="#contato" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300">Entre em Contato</a>
     </div>
   </section>
 
   <!-- SERVIÇOS -->
-  <section id="servicos" class="py-16 bg-black text-stone-200">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-12">Serviços</h3>
+  <section id="servicos" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Nossos Serviços</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- ... conteúdo inalterado ... -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Instalações Residenciais</h3>
+          <p>Serviços elétricos completos para sua casa com segurança e qualidade.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Manutenção Preventiva</h3>
+          <p>Verificação e correções para evitar problemas futuros.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Projetos Elétricos</h3>
+          <p>Planejamento e execução de projetos sob medida para sua necessidade.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SOBRE -->
-  <section id="sobre" class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-black">
-      <div class="items-center max-w-xs scale-90 mx-auto">
-        <img src="./images/sobre.png" alt="Eletricista" class="w-full h-auto">
-      </div>
+  <section id="sobre" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <img src="sobre.png" alt="Sobre Nós" class="rounded-lg shadow w-4/5 mx-auto md:w-3/4">
       <div>
-        <h3 class="text-3xl font-bold mb-6 text-center text-orange-500">Sobre nós</h3>
-        <p class="mb-4 text-justify">Nova Elétrica, empresa há mais de 12 anos no mercado buscando atender com eficiência e rapidez Cidade e toda região.<br>
-          Contamos com uma equipe de profissionais qualificados, onde todos os serviços são realizados com o uso de EPI's, priorizando a qualidade e segurança.<br>
-          Buscamos sempre inovações para melhor atender as necessidades de nossos clientes.</p>
-        <ul class="px-8">
-          <li class="">Na Nova Eletrica prezamos por:</li>
-          <li class="font-semibold">✔ Qualidade</li>
-          <li class="font-semibold">✔ Profissionalismo</li>
-          <li class="font-semibold">✔ Segurança</li>
-        </ul>
-        <p class="mb-4 mt-8 text-center">Venha fazer parte de nossa história. Conte conosco.</p><br><br>
-        <a href="https://wa.me/5599999999999" target="_blank" class="text-xl hover:animate-pulse animate-pulse px-2 py-1 text-white bg-orange-500 hover:scale-120 shadow-xl shadow-orange-400">
-        Solicitar Orçamento
-        </a>
+        <h2 class="text-3xl font-bold mb-6">Sobre Nós</h2>
+        <p class="text-lg mb-4">Com anos de experiência no setor elétrico, oferecemos soluções seguras e eficientes para residências e empresas. Nosso compromisso é com a qualidade e satisfação de nossos clientes.</p>
+        <p class="text-lg">Trabalhamos com dedicação para garantir que cada projeto seja realizado dentro das normas e com excelência técnica.</p>
       </div>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section class="py-1 bg-stone-100 text-stone7">
+  <section id="contato" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-6 mt-10">Contato</h3>
+      <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+      <p class="mb-6">Solicite um orçamento ou tire suas dúvidas. Estamos prontos para ajudar!</p>
+      <a href="mailto:contato@novaeletrica.com" class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-400">Enviar Email</a>
     </div>
-  </section>  
-
-  <section id="contato" class="py-14 bg-stone-100 text-stone-700 grid md:grid-cols-2 gap-12 justify-center">  
-    <!-- ... conteúdo inalterado ... -->
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
-    <p>&copy; 2025 Nova Elétrica - Todos os direitos reservados.</p>
-    <p class="mt-2">Desenvolvido por <a href="https://n-soft.dev" target="_blank" class="text-yellow-500 hover:underline">n-soft.dev</a></p>
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 Nova Elétrica. Todos os direitos reservados.</p>
+      <p class="mt-4 md:mt-0">Desenvolvido por <a href="https://n-soft.dev" class="text-yellow-400 hover:text-yellow-300">n-soft.dev</a></p>
+    </div>
   </footer>
+
+  <!-- SCRIPT MENU -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Fecha o menu ao clicar em um link
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
 
 </body>
 </html>
